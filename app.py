@@ -39,7 +39,9 @@ def get_prediction():
 
     
     #load machinelearning trained model
-    with open("model/try.pkl","rb") as obj:
+    #with open("model/try.pkl","rb") as obj:
+    #when deploy it remove the path
+    with open("try.pkl","rb") as obj:
         mymodel=pickle.load(obj)
         #make predictions
     prediction=mymodel.predict(baby_df)
